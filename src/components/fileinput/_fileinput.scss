@@ -1,0 +1,76 @@
+/* ===============File Input================== */
+
+
+.cmp-adaptiveform-fileinput {
+  @include common-input-elements;
+
+  &__label-container {
+    padding-block-start: 2*$space-xs;
+  }
+  
+  &__label {
+    @include static-label;
+  }
+
+  &__widget {
+    column-gap: $space-l;
+  }
+
+  &__widget::-webkit-file-upload-button {
+    visibility: hidden;
+    background-color: $very-light-gray;
+    border: none;
+    height: $tap-height;
+    border-radius: $button-radius;
+    font-weight: 500;
+    padding: 0 $space-l;
+  }
+
+  &__widgetlabel::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(./resources/images/file-attach.svg) center center / cover no-repeat;
+  }
+
+  &__widgetlabel {
+    @include secondary-button;
+    display: flex;
+    align-items: center;
+    column-gap: $space-xs;
+    margin: $space-s 0;
+    padding: 0 $space-s;
+  }
+
+  &__filelist {
+    padding-inline-start: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  &__fileitem {
+    display: block;
+    padding: $space-s;
+    border-top: $border-light;
+  }
+  
+  &__filename {
+    position: static;
+    font-size: $font-s;
+  }
+  
+  &__filedelete {
+    float: right;
+    font-size: $font-l;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 1px 0 $white;
+    opacity: .2;
+    cursor: pointer;
+  }
+}
+
+br {
+  display: none;
+}

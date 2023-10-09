@@ -1,0 +1,88 @@
+.cmp-adaptiveform-wizard {
+  @include component-box;
+
+  & div[data-cmp-is="adaptiveFormPanel"] {
+    margin-bottom: 0;
+  }
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+  
+  &__label {
+    @include h2;
+  }
+  &__widget {
+    position: relative;
+  }
+  &__tabList {
+    @include tab-list;
+  }
+  &__tab::before {
+    counter-increment: section;
+    content: counter(section);
+    margin-inline-end: $space-s;
+    background-color: rgba($color: #fff, $alpha: .5);
+    padding: 6px;
+    line-height: .5;
+    border-radius: $button-radius;
+    color: $dark-gray;
+    text-align: center;
+    font-size: $font-s;
+    font-weight: bold;
+  }
+  .cmp-adaptiveform-wizard__tab {
+    @include wizard-tab;  
+  }
+  .cmp-adaptiveform-wizard__tab:last-child {
+    margin: 0;
+  }
+  &__containerNav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: -80px;
+  }
+  &__nav {
+    &--previous {
+      @include wizard-navigation-buttons;
+      &::before {
+        content: 'Previous';
+      }
+      
+    }
+    &--next {
+      @include wizard-navigation-buttons;
+      &::before {
+        content: 'Next';
+      }
+    }
+  }
+  &__nextNav {
+    @include wizard-navigation-buttons;
+    &::before {
+      content: 'Next';
+      position: static;  
+    }
+  }
+
+  &__previousNav {
+    @include wizard-navigation-buttons;
+    &::before {
+      content: 'Previous';
+      position: static;  
+    }
+  }
+  
+  @include description;
+  
+}
+
+.cmp-adaptiveform-wizard__tab--active~.cmp-adaptiveform-wizard__tab {
+  color: $gray;
+}
+
+.cmp-adaptiveform-wizard__tab--active~.cmp-adaptiveform-wizard__tab::before {
+  color: $dark-gray;
+}

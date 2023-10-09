@@ -1,0 +1,23 @@
+/* ===============Datepicker================== */
+
+.cmp-adaptiveform-datepicker {
+  @include common-input-elements;
+  @include fields-default;
+  @include error-state;
+  &__widget {
+    @include component-widget;
+    padding-top: $input-padding;
+    &::-webkit-calendar-picker-indicator {
+      position: absolute;
+      right: 10px;
+    }
+    &::-webkit-date-and-time-value {
+      text-align: left;
+    }
+    font-family: SourceSans,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  &__label{
+    @include floating-label; 
+  }
+}

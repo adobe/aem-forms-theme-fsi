@@ -1,0 +1,95 @@
+/* ===============Panel Container================== */
+.cmp-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include description;
+
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+
+  &__label {
+    @include h2;
+  }
+  & div.base:has(>div[data-cmp-valid=false])+div.base>div {
+    border-top: none;
+  }
+}
+
+.cmp-container[data-cmp-is="adaptiveFormPanel"] {
+  margin: 0 0 $space-l 0;
+}
+
+
+.cmp-container[data-cmp-is="adaptiveFormPanel"]:not(:last-child) {
+  margin-bottom: $space-l;
+}
+
+//first field curved corners
+.cmp-container[data-cmp-is="adaptiveFormPanel"]>div:nth-child(3)>div.cmp-adaptiveform-dropdown,
+.cmp-container[data-cmp-is="adaptiveFormPanel"]>div:nth-child(3)>div.cmp-adaptiveform-textinput,
+.cmp-container[data-cmp-is="adaptiveFormPanel"]>div:nth-child(3)>div.cmp-adaptiveform-numberinput,
+.cmp-container[data-cmp-is="adaptiveFormPanel"]>div:nth-child(3)>div.cmp-adaptiveform-datepicker,
+.cmp-container[data-cmp-is="adaptiveFormPanel"]>div:nth-child(3)>div.cmp-adaptiveform-checkboxgroup,
+.cmp-container[data-cmp-is="adaptiveFormPanel"]>div:nth-child(3)>div.cmp-adaptiveform-fileinput,
+.cmp-container[data-cmp-is="adaptiveFormPanel"]>div:nth-child(3)>div.cmp-adaptiveform-radiobutton,
+.cmp-container[data-cmp-is="adaptiveFormPanel"]>div:nth-child(3)>div.cmp-adaptiveform-telephoneinput,
+.cmp-container[data-cmp-is="adaptiveFormPanel"]>div:nth-child(3)>div.cmp-adaptiveform-emailinput {
+  border-top-left-radius: $field-radius;
+  border-top-right-radius: $field-radius;
+}
+
+//first field curved corners - responsive
+.cmp-container[data-cmp-is="adaptiveFormPanel"]>.aem-Grid>div:nth-child(1)>div {
+  border-top-left-radius: $field-radius;
+  border-top-right-radius: $field-radius;
+}
+
+//last field curved corners - responsive
+.cmp-container[data-cmp-is="adaptiveFormPanel"]>.aem-Grid>div:last-child>div {
+  border-bottom: $border-light;
+  border-bottom-left-radius: $field-radius;
+  border-bottom-right-radius: $field-radius;
+}
+
+div[data-cmp-is="adaptiveFormPanel"] {
+  @include tab-panel;
+}
+
+//hide top border of next field
+.cmp-container div:focus-within+div>div.cmp-adaptiveform-dropdown,
+.cmp-container div:focus-within+div>div.cmp-adaptiveform-textinput,
+.cmp-container div:focus-within+div>div.cmp-adaptiveform-numberinput,
+.cmp-container div:focus-within+div>div.cmp-adaptiveform-datepicker,
+.cmp-container div:focus-within+div>div.cmp-adaptiveform-checkboxgroup,
+.cmp-container div:focus-within+div>div.cmp-adaptiveform-fileinput,
+.cmp-container div:focus-within+div>div.cmp-adaptiveform-radiobutton,
+.cmp-container div:focus-within+div>div.cmp-adaptiveform-telephoneinput,
+.cmp-container div:focus-within+div>div.cmp-adaptiveform-emailinput {
+  border-top-color: transparent;
+}
+
+// should we apply to all elements
+//last field curved corners
+.cmp-container[data-cmp-is="adaptiveFormPanel"] div:last-child>div.cmp-adaptiveform-dropdown,
+.cmp-container[data-cmp-is="adaptiveFormPanel"] div:last-child>div.cmp-adaptiveform-textinput,
+.cmp-container[data-cmp-is="adaptiveFormPanel"] div:last-child>div.cmp-adaptiveform-numberinput,
+.cmp-container[data-cmp-is="adaptiveFormPanel"] div:last-child>div.cmp-adaptiveform-datepicker,
+.cmp-container[data-cmp-is="adaptiveFormPanel"] div:last-child>div.cmp-adaptiveform-checkboxgroup,
+.cmp-container[data-cmp-is="adaptiveFormPanel"] div:last-child>div.cmp-adaptiveform-fileinput,
+.cmp-container[data-cmp-is="adaptiveFormPanel"] div:last-child>div.cmp-adaptiveform-radiobutton,
+.cmp-container[data-cmp-is="adaptiveFormPanel"] div:last-child>div.cmp-adaptiveform-telephoneinput,
+.cmp-container[data-cmp-is="adaptiveFormPanel"] div:last-child>div.cmp-adaptiveform-emailinput {
+  border-bottom: $border-light;
+  border-bottom-left-radius: $field-radius;
+  border-bottom-right-radius: $field-radius;
+}
+
+.new,
+.newpar,
+.section {
+  display: hidden;
+
+}

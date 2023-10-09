@@ -1,0 +1,29 @@
+/* ===============Button================== */
+.cmp-adaptiveform-button {
+  @include description;
+  position: relative;
+  border: none;
+  margin: $space-s 0;
+
+  &__widget {
+    @include primary-button;
+    &[disabled] {
+      opacity: 50%;
+    }
+  }
+
+  &__widget[data-cmp-enabled]:not([data-cmp-enabled=true]) {
+    background: $gray;
+    color: $very-light-gray;
+  }
+}
+
+span.cmp-adaptiveform-button__text {
+  font-weight: 500;
+}
+
+.submit {
+  position: sticky;
+  bottom: 0;
+  z-index: 12;
+}

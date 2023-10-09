@@ -1,0 +1,27 @@
+@use 'sass:math';
+.cmp-adaptiveform-textinput {
+
+  @include input;
+  @include floating-field; 
+
+  &__label-container:has(+ textarea)>&__label {
+    top: math.div(($field-height + $input-padding - 16px), 2);
+  }
+
+  &>textarea {
+    @include component-widget;
+    @include error-message;
+    &.cmp-adaptiveform-textinput__widget {
+      height: 80px;
+      margin-block: 32px $space-s;
+      margin-inline: 0 $space-xs;
+      padding-top: 0px;
+      max-width: 100%;
+    }
+    @include custom-scrollbar;
+  }
+}
+
+div:focus-within {
+  z-index: 10;
+}

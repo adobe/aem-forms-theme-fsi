@@ -1,0 +1,32 @@
+@use 'sass:math';
+
+.cmp-adaptiveform-pageheader{
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background: white;
+  column-gap: $space-s;
+  padding: 24px;
+  color: $dark-gray;
+  font-size: $font-m;
+  border-bottom: $border-light;
+  border-color: $bg-gray;
+  box-shadow:  0px 4px 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.cmp-adaptiveform-pageheader img{
+  height: math.div($tap-height, 1.5);
+  margin: 0;
+  width: auto;
+  color: white;
+  display: block;
+}
+
+.cmp-adaptiveform-pageheader div:last-child{
+  display: flex;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+}

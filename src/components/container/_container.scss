@@ -1,0 +1,38 @@
+/* ===============Container================== */
+.cmp-adaptiveform-container {
+  &__wrapper {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-top: $space-l;
+    padding-bottom: $space-l;
+
+    @media(max-width:767px) {
+      padding: $space-s;
+    }
+    @media(min-width:768px) {
+      width: 640px
+  }
+
+  @media(min-width:992px) {
+      width: 940px
+  }
+
+  @media(min-width:1200px) {
+      width: 760px;
+  }
+  }
+
+  &--loading {
+    background: rgb(255, 255, 255) url(./resources/images/busy-state.gif) no-repeat fixed center;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    cursor: wait;
+    z-index: 100000;
+  }
+}

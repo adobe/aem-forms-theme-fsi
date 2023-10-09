@@ -1,0 +1,98 @@
+.cmp-accordion {
+  @include component-box;
+  @include description;
+
+  &__panel {
+    @include tab-panel;
+  }
+
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+
+  &__label {
+    @include h2;
+  }
+
+  &__item {
+    opacity: 1;
+    .cmp-accordion__panel {
+      padding: 0 0;
+    }
+  }
+
+  &__button {
+    opacity: 1;
+    height: $tap-height;
+    font-size: $font-m;
+    font-weight: bold;
+    color: gray;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-bottom: $border-light-gray;
+    padding: $space-s;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: SourceSansSemiBold, SourceSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  &__button &__icon {
+    display: inline-block;
+    background: url(./resources/images/dropdown.svg) center center / cover no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cmp-accordion__button.cmp-accordion__button--expanded &__icon {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+
+  &__button:hover>.cmp-accordion__title:before {
+    border-color: $secondary;
+  }
+
+  &__title {
+    font-weight: 500;
+    display: flex;
+    column-gap: $space-s;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    @include tab-list;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+
+  }
+
+  &__header{
+    display: flex;
+  }
+
+  &__button:hover {
+    color: $dark-gray;
+  }
+
+  &__button--expanded {
+    color: $accent;
+    border-color: transparent;
+  }
+
+  &__button--expanded:hover {
+    color: $accent;
+  }
+  
+  &__button:hover>.cmp-accordion__title:before {
+    border-color: $dark-gray;
+  }
+
+  &__repeatable-buttons {
+    @include repeatable-buttons;
+  }
+}
+
+

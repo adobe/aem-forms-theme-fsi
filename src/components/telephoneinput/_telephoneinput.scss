@@ -1,0 +1,9 @@
+/* ===============Telephone Input================== */
+.cmp-adaptiveform-telephoneinput {
+  @include input;
+  @include floating-field;
+  @include fields-default;
+}
+.telephoneinput {
+  @include error-state;
+}

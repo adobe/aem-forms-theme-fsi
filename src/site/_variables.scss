@@ -1,0 +1,44 @@
+//== Font
+
+
+// ====== colors======
+$dark-gray: rgb(22, 22, 22);
+$gray: rgb(109, 109, 109);
+$light-gray: #969696;
+$secondary: rgb(22, 22, 22);
+$very-light-gray: #ccc;
+$bg-gray: #eee;
+$white: #fff;
+$error: #eb3c36;
+$light-error: rgba(235, 60, 54, 0.05);
+$dark-error: rgba(255, 57, 50, 0.148);
+$accent: rgb(21, 88, 212);
+$dark-accent: rgb(0, 49, 141);
+$focus-outline: 2px $accent solid;
+$error-outline: 2px $error solid;
+$border-light: 1px rgba($color: #fff, $alpha: 0.6) solid;
+$border-light-gray: 1px #969696 solid;
+$border-error: 1px $error solid;
+$border-dark: 1px white solid;
+
+// ====== font size======
+$font-xl: 2.618em;
+$font-l: 1.618em;
+$font-m: 1rem;
+$font-s: .75rem;
+
+// ====== space ======
+$space-xs: 4px;
+$space-s: 12px;
+$space-m: 36px;
+$space-l: 72px;
+
+$field-height: 40px;
+$field-radius: 8px;
+$button-radius: 8px;
+$tap-height: 44px;
+$input-padding: 20px;
+
+//== Grid
+
+$max_col: 12;

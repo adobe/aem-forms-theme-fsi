@@ -1,0 +1,26 @@
+.cmp-tabs {
+  @include description;
+  @include component-box;
+
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+
+  &__label {
+    @include h2;
+  }
+  
+  &__tablist {
+    @include tab-list;
+  
+  }
+  
+  &__tabpanel {
+    @include tab-panel;
+  }
+  
+  &__tab {
+    @include default-tab;
+  }
+
+}

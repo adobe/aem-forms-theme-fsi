@@ -1,0 +1,9 @@
+/* ===============Email Input================== */
+.cmp-adaptiveform-emailinput {
+  @include input;
+  @include floating-field;
+  @include fields-default;
+}
+.emailinput {
+  @include error-state;
+}

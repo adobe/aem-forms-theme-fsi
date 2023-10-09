@@ -1,0 +1,45 @@
+/* ===============Drop Down================== */
+
+.cmp-adaptiveform-dropdown {
+  @include common-input-elements;
+
+  &__widget {
+    @include component-widget;
+    margin-top: $input-padding;
+    background-image: url('./resources/images/dropdown.svg');
+    background-repeat: no-repeat;
+    background-position: right 0px center;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+
+  [dir='rtl'] &__widget {
+    background-position: left 0px center;
+  }
+
+  &__label {
+    @include component-label;
+  }
+
+  &__label-container:has(~ select[multiple='multiple'])>&__label,
+  &__label-container:has(~ select>option[selected])>&__label {
+      @include floating-label;
+  }
+
+  &__widget[multiple='multiple'] {
+    height: 80px;
+    margin-bottom: $space-s;
+    margin-top: 2 * $input-padding;
+  }
+
+}
+
+select::after {
+  content: '';
+  background: url(./resources/images/dropdown.svg) center center / cover no-repeat;
+}
+
+.cmp-adaptiveform-dropdown--filled .cmp-adaptiveform-dropdown__label {
+  @include floating-label;
+}
