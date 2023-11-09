@@ -1,6 +1,6 @@
 {
     "name": "@aemforms/af-fsi-theme",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "AEM Forms FSI theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
     "scripts": {
