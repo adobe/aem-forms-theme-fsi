@@ -4,6 +4,9 @@
 
   &__panel {
     @include tab-panel;
+    &--hidden {
+      display: none;
+    }
   }
 
   &__label-container {
