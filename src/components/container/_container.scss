@@ -3,23 +3,13 @@
   &__wrapper {
     box-sizing: border-box;
     margin: 0 auto;
-    padding-top: $space-l;
-    padding-bottom: $space-l;
+    padding-block: $space-l;
+    width: 100%;
+    padding-inline: 20%;
 
-    @media(max-width:767px) {
-      padding: $space-s;
+    @media(max-width:768px) {
+      padding-inline: $space-s;
     }
-    @media(min-width:768px) {
-      width: 640px
-  }
-
-  @media(min-width:992px) {
-      width: 940px
-  }
-
-  @media(min-width:1200px) {
-      width: 760px;
-  }
   }
 
   &--loading {

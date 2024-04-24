@@ -50,9 +50,18 @@
   }
   
   &__fileitem {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     padding: $space-s;
     border-top: $border-light;
+  }
+
+  &__fileendcontainer {
+    display: flex;
+    justify-content: space-between;
+    gap: $space-s;
+    align-items: center;
   }
   
   &__filename {

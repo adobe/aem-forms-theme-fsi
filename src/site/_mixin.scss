@@ -377,6 +377,7 @@
 }
 
 @mixin secondary-button {
+    width: 100%;
     pointer-events: all;
     position: static;
     align-self: flex-start;
@@ -407,15 +408,14 @@
         transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
     }
 
-    @media (max-width: 640px) {
-        width: 100%
+    @media (min-width: 640px) {
+        width: fit-content;
     }
 }
 
 @mixin wizard-navigation-buttons {
     @include secondary-button;
     display: flex;
-    width: fit-content;
     justify-content: center;
     align-items: center;
     margin: $space-s 0;
