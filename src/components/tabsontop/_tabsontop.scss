@@ -10,7 +10,7 @@
     @include h2;
   }
   
-  &__tablist {
+  & &__tablist {
     @include tab-list;
   
   }
@@ -19,7 +19,7 @@
     @include tab-panel;
   }
   
-  &__tab {
+  &__tablist &__tab {
     @include default-tab;
   }
 
