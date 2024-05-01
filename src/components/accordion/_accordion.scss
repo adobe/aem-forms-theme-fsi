@@ -24,7 +24,7 @@
     }
   }
 
-  &__button {
+  &__header &__button {
     opacity: 1;
     height: $tap-height;
     font-size: $font-m;
