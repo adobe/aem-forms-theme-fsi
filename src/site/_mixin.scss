@@ -345,7 +345,7 @@
 //buttons
 @mixin primary-button {
     display: block;
-    background-color: rgba($color: $accent, $alpha: .8);
+    background-color: rgba($color: $accent, $alpha: .9);
     border: none;
     border-radius: $button-radius;
     height: $tap-height;
