@@ -23,7 +23,7 @@
     &[data-cmp-valid=false]>&__label,
     &[data-cmp-valid=false]>&__label-container>&__label {
         font-weight: 500;
-        color: $error ;
+        color: $error-darker;
     }
 }
 
@@ -249,7 +249,7 @@
 @mixin error-message {
     &__errormessage {
         display: none;
-        color: $error;
+        color: $error-darker;
         font-size: $font-s;
         font-weight: 500;
         margin-bottom: $space-s;
