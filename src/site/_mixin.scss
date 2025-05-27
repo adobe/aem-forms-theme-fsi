@@ -466,9 +466,11 @@
     border-bottom: $border-light;
     border-color: transparent;
     border: none;
+    font-weight: normal;
 
     &--active {
-        color: $accent;
+        color: $black;
+        font-weight: 600;
     }
 
     &:last-child {
