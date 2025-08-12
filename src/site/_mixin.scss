@@ -466,9 +466,10 @@
     border-bottom: $border-light;
     border-color: transparent;
     border: none;
+    font-weight: normal;
 
     &--active {
-        color: $accent;
+        color: $black;
     }
 
     &:last-child {
@@ -525,7 +526,7 @@
     }
 
     &--active {
-        color: $accent;
+        color: $black;
         border-color: transparent;
         display: flex;
         align-items: center;
@@ -583,7 +584,7 @@
     }
     &--active {
         background-color: rgba($color: #000, $alpha: .05);
-        color: $secondary;
+        color: $black
     }
 }
   
