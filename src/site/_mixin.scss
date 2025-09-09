@@ -528,8 +528,7 @@
         border-color: transparent;
         display: flex;
         align-items: center;
-
-        background-color: rgba($color: #000, $alpha: .05);
+        // background-color: rgba($color: #000, $alpha: .05);
         // box-shadow: 0 15px 10px -15px rgba(42, 69, 152, 0.345);
         &:hover {
             color: $accent;
