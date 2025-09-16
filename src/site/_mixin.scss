@@ -510,7 +510,7 @@
     align-self: flex-start;
     display: flex;
     flex-flow: wrap;
-    align-items: end !important;
+    align-items: flex-end !important;
     font-weight: 600;
     border-radius: $button-radius;
     border-width: 2px;
@@ -545,7 +545,7 @@
         content: "";
         display: block;
         width: 100%;
-        border-top: 2px solid $black;
+        border-bottom: 2px solid $black;
     }
 }
 
