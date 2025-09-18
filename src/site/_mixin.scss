@@ -459,7 +459,6 @@
     box-sizing: border-box;
     flex: 1;
     display: flex;
-    align-items: center;
     font-size: $font-m;
     border-radius: $button-radius;
     border-bottom-width: 2px;
@@ -468,7 +467,7 @@
     border: none;
 
     &--active {
-        color: $accent;
+        color: $black;
     }
 
     &:last-child {
@@ -500,7 +499,6 @@
         text-align: center;
         font-size: $font-s;
     }
-
 }
 
 @mixin default-tab {
@@ -511,7 +509,8 @@
     font-size: $font-m;
     align-self: flex-start;
     display: flex;
-    align-items: center;
+    flex-flow: wrap;
+    align-items: flex-end !important;
     font-weight: 600;
     border-radius: $button-radius;
     border-width: 2px;
@@ -525,24 +524,29 @@
     }
 
     &--active {
-        color: $accent;
+        color: $black;
         border-color: transparent;
         display: flex;
         align-items: center;
-
-        background-color: rgba($color: #000, $alpha: .05);
+        // background-color: rgba($color: #000, $alpha: .05);
         // box-shadow: 0 15px 10px -15px rgba(42, 69, 152, 0.345);
         &:hover {
             color: $accent;
         }
     }
 
-    &--active::after {
-        content: '—';
-        display: none;
-        color: $accent;
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
     }
 
+    &--active::after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid $black;
+    }
 }
 
 @mixin tab-list {
@@ -583,7 +587,7 @@
     }
     &--active {
         background-color: rgba($color: #000, $alpha: .05);
-        color: $secondary;
+        color: $black
     }
 }
   
